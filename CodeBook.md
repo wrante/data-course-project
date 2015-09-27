@@ -12,4 +12,5 @@ A description of the project and experiments can be found in the 'README.md' fil
 * Label the data set with descriptive variable names
 * Create a tidy data set by grouping by Subject and Activity and summarizing with the average of each variable
 
+## Variables
 
