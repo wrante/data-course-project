@@ -1,0 +1,14 @@
+# data-course-project
+Getting and Cleaning Data Course Project
+
+## Project Description
+
+The purpose of this project is to clean a set of data from experiments involving human activity measured by smartphones containing motion sensors. The data, which can be found in the 'UCI HAR Dataset' folder can be obtained from http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones. Below is a description of the experiments from the UCI website.
+
+"The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
+
+The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain."
+
+## Data Cleaning and Analysis
+
+The R file, 'run_analysis.R' cleans the data and performs the analysis. First, it combines the data for the test set by combining the columns from 'subject_test.txt', 'X_test.txt', and 'y_test.txt'. It does the same for train set and then combines those into one large set of data. Corresponding variable names are added to the data from the 'features.txt' file. Next, only the measurements on the mean and standard deviation are extracted by subsetting the data to contain only those columns which contain "mean()" or "std()" in their name. The activity labels are then changed from their number to the text description given in the 'activity_labels.txt' file. Then the variable names are made conventional by removing parentheses and substituting dashes with dots. Also they are more descriptive by changing the beginning 't' letters to 'time' and the beginning 'f' letters to 'freq'. Finally, a tidy set of data is created with the average of each variable for each activity and subject. This is done by grouping the data by Subject and Activity and then summarizing each variable with the mean function.
