@@ -30,8 +30,11 @@ Description of the activity performed. Possible activities:
 The following variables were all measured with the accelerometer or gyroscope. The accelerometer measurements which contain 'Acc' in the variable name are in standard gravity units 'g'. The gyroscope measurements which contain 'Gyro' in the variable name are in units of radians/second. Each cell represents the average measurement for the given subject and activity.
 
 timeBodyAcc.mean.X
+
 timeBodyAcc.mean.Y
+
 timeBodyAcc.mean.Z
+
 timeBodyAcc.std.X
 timeBodyAcc.std.Y
 timeBodyAcc.std.Z
